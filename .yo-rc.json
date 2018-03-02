@@ -1,0 +1,11 @@
+{
+  "generator-openapi-repo": {
+    "importExistingSpec": true,
+    "importedSpec": "swagger.yaml",
+    "name": "ADEMS People Management",
+    "repo": "iatec-docs/PeopleManagementApi",
+    "splitSpec": false,
+    "samples": true,
+    "installSwaggerUI": true
+  }
+}
