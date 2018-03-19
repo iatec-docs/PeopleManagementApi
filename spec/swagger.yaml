@@ -1,12 +1,15 @@
 swagger: '2.0'
 info:
-  title: 'People Management API'
-  version: '0.1.0'
-# Added by API Auto Mocking Plugin
-host: virtserver.swaggerhub.com 
-basePath: /iatec/People/0.1
+  title: 'People Management API - BRA'
+  version: '0.2.0'
+
+host: ws-peoplemgmt.sdasystems.org
+basePath: /bra
 schemes:
  - https
+security:
+  - client_credentials:
+    - peoplemgmt.bra
 paths:
   '/addressType/byId':
     get:
@@ -5877,6 +5880,11 @@ definitions:
         items:
           $ref: '#/definitions/NaturalPersonLiteExternal'
 
-
-# END
-
+securityDefinitions:
+  client_credentials:
+    type: "oauth2"
+    description: "Generates a token via the Client Credentials flow."
+    tokenUrl: "https://login.sdasystems.org/connect/token"
+    flow: "application"
+    scopes: 
+      peoplemgmt.bra: "People Management API"
