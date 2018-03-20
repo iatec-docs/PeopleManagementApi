@@ -1,15 +1,15 @@
-swagger: '2.0'
-info:
-  title: 'People Management API - BRA'
-  version: '0.2.0'
-
-host: ws-peoplemgmt.sdasystems.org
-basePath: /bra
-schemes:
- - https
-security:
-  - client_credentials:
-    - peoplemgmt.bra
+swagger: '2.0'                           
+info:                                    
+  title: 'People Management API - BRA'   
+  version: '0.2.1'                       
+                                         
+host: ws-peoplemgmt.sdasystems.org       
+basePath: /bra                           
+schemes:                                 
+ - https                                 
+security:                                
+  - client_credentials:                  
+    - peoplemgmt.bra                     
 paths:
   '/addressType/byId':
     get:
@@ -40,7 +40,7 @@ paths:
         - name: filter
           in: query
           type: string
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -95,7 +95,7 @@ paths:
           items:
             type: string
             format: uuid
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -134,7 +134,7 @@ paths:
         - name: filter
           in: query
           type: string
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -189,7 +189,7 @@ paths:
           items:
             type: string
             format: uuid
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -210,7 +210,7 @@ paths:
         - name: cert
           in: query
           type: string
-          required: true
+          required: false
       responses:
         204:
           description: 'Done'
@@ -225,7 +225,7 @@ paths:
         - name: tokenKey
           in: query
           type: string
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -307,7 +307,7 @@ paths:
           items:
             type: string
             format: uuid
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -330,7 +330,7 @@ paths:
           type: array
           items:
             type: string
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -351,14 +351,14 @@ paths:
         - name: filter
           in: query
           type: string
-          required: true
+          required: false
         - name: selectedItems
           in: query
           type: array
           items:
             type: string
             format: uuid
-          required: true
+          required: false
         - name: numRows
           in: query
           type: integer
@@ -385,7 +385,7 @@ paths:
         - name: filter
           in: query
           type: string
-          required: true
+          required: false
         - name: numRows
           in: query
           type: integer
@@ -412,7 +412,7 @@ paths:
         - name: filter
           in: query
           type: string
-          required: true
+          required: false
         - name: numRows
           in: query
           type: integer
@@ -439,7 +439,7 @@ paths:
         - name: filter
           in: query
           type: string
-          required: true
+          required: false
         - name: numRows
           in: query
           type: integer
@@ -484,7 +484,7 @@ paths:
         - name: filter
           in: query
           type: string
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -513,7 +513,7 @@ paths:
           items:
             type: string
             format: uuid
-          required: true
+          required: false
         - name: numRows
           in: query
           type: integer
@@ -574,7 +574,7 @@ paths:
           items:
             type: string
             format: uuid
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -613,7 +613,7 @@ paths:
         - name: filter
           in: query
           type: string
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -642,7 +642,7 @@ paths:
           items:
             type: string
             format: uuid
-          required: true
+          required: false
         - name: numRows
           in: query
           type: integer
@@ -703,7 +703,7 @@ paths:
           items:
             type: string
             format: uuid
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -764,7 +764,7 @@ paths:
         - name: filter
           in: query
           type: string
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -819,7 +819,7 @@ paths:
           items:
             type: string
             format: uuid
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -858,7 +858,7 @@ paths:
         - name: filter
           in: query
           type: string
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -882,7 +882,7 @@ paths:
           items:
             type: string
             format: uuid
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -906,7 +906,7 @@ paths:
           items:
             type: string
             format: uuid
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -927,7 +927,7 @@ paths:
         - name: filter
           in: query
           type: string
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -948,7 +948,7 @@ paths:
         - name: filter
           in: query
           type: string
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -974,7 +974,7 @@ paths:
         - name: filter
           in: query
           type: string
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -1060,7 +1060,7 @@ paths:
           in: body
           schema:
             $ref: '#/definitions/EmergencyContactLite'
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -1120,7 +1120,7 @@ paths:
           items:
             type: string
             format: uuid
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -1159,7 +1159,7 @@ paths:
         - name: filter
           in: query
           type: string
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -1183,7 +1183,7 @@ paths:
           items:
             type: string
             format: uuid
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -1205,7 +1205,7 @@ paths:
           in: body
           schema:
             $ref: '#/definitions/Ethnicity'
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -1268,7 +1268,7 @@ paths:
         - name: name
           in: query
           type: string
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -1285,7 +1285,7 @@ paths:
         - name: filter
           in: query
           type: string
-          required: true
+          required: false
         - name: numRows
           in: query
           type: integer
@@ -1312,7 +1312,7 @@ paths:
         - name: filter
           in: query
           type: string
-          required: true
+          required: false
         - name: numRows
           in: query
           type: integer
@@ -1339,7 +1339,7 @@ paths:
         - name: id
           in: query
           type: string
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -1374,7 +1374,7 @@ paths:
         - name: filter
           in: query
           type: string
-          required: true
+          required: false
         - name: numRows
           in: query
           type: integer
@@ -1435,7 +1435,7 @@ paths:
           items:
             type: string
             format: uuid
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -1457,7 +1457,7 @@ paths:
           in: body
           schema:
             $ref: '#/definitions/HealthPlan'
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -1492,7 +1492,7 @@ paths:
             type: array
             items:
               $ref: '#/definitions/NaturalPersonIntegration'
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -1534,7 +1534,7 @@ paths:
           items:
             type: string
             format: uuid
-          required: true
+          required: false
       responses:
         204:
           description: 'Done'
@@ -1549,7 +1549,7 @@ paths:
           in: body
           schema:
             $ref: '#/definitions/LegalEntityLiteExternal'
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -1566,7 +1566,7 @@ paths:
         - name: code
           in: query
           type: string
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -1601,7 +1601,7 @@ paths:
         - name: documentNumber
           in: query
           type: string
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -1620,14 +1620,14 @@ paths:
           type: array
           items:
             type: string
-          required: true
+          required: false
         - name: documentTypeIdList
           in: query
           type: array
           items:
             type: string
             format: uuid
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -1651,7 +1651,7 @@ paths:
           items:
             type: string
             format: uuid
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -1672,7 +1672,7 @@ paths:
         - name: filter
           in: query
           type: string
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -1693,11 +1693,11 @@ paths:
         - name: filter
           in: query
           type: string
-          required: true
+          required: false
         - name: isAdventist
           in: query
           type: boolean
-          required: true
+          required: false
         - name: numRows
           in: query
           type: integer
@@ -1724,15 +1724,15 @@ paths:
         - name: filter
           in: query
           type: string
-          required: true
+          required: false
         - name: isAdventist
           in: query
           type: boolean
-          required: true
+          required: false
         - name: documentNumber
           in: query
           type: string
-          required: true
+          required: false
         - name: numRows
           in: query
           type: integer
@@ -1760,7 +1760,7 @@ paths:
           in: body
           schema:
             $ref: '#/definitions/LegalEntityLiteExternal'
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -1780,7 +1780,7 @@ paths:
           items:
             type: string
             format: uuid
-          required: true
+          required: false
       responses:
         204:
           description: 'Done'
@@ -1814,7 +1814,7 @@ paths:
           items:
             type: string
             format: uuid
-          required: true
+          required: false
       responses:
         204:
           description: 'Done'
@@ -1860,7 +1860,7 @@ paths:
         - name: zipCode
           in: query
           type: string
-          required: true
+          required: false
         - name: countryId
           in: query
           type: string
@@ -1885,7 +1885,7 @@ paths:
           items:
             type: string
             format: uuid
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -1906,7 +1906,7 @@ paths:
         - name: filter
           in: query
           type: string
-          required: true
+          required: false
         - name: divisionType
           in: body
           schema:
@@ -1921,7 +1921,7 @@ paths:
           in: query
           type: string
           format: uuid
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -1944,7 +1944,7 @@ paths:
           type: array
           items:
             type: string
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -1965,7 +1965,7 @@ paths:
         - name: filter
           in: query
           type: string
-          required: true
+          required: false
         - name: localityTypeId
           in: query
           type: string
@@ -1975,7 +1975,7 @@ paths:
           in: query
           type: string
           format: uuid
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -2019,7 +2019,7 @@ paths:
         - name: filter
           in: query
           type: string
-          required: true
+          required: false
         - name: numRows
           in: query
           type: integer
@@ -2051,7 +2051,7 @@ paths:
         - name: filter
           in: query
           type: string
-          required: true
+          required: false
         - name: numRows
           in: query
           type: integer
@@ -2078,17 +2078,17 @@ paths:
         - name: filter
           in: query
           type: string
-          required: true
+          required: false
         - name: countryId
           in: query
           type: string
           format: uuid
-          required: true
+          required: false
         - name: localityTypeId
           in: query
           type: string
           format: uuid
-          required: true
+          required: false
         - name: numRows
           in: query
           type: integer
@@ -2190,7 +2190,7 @@ paths:
         - name: filter
           in: query
           type: string
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -2214,7 +2214,7 @@ paths:
           items:
             type: string
             format: uuid
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -2276,7 +2276,7 @@ paths:
         - name: filter
           in: query
           type: string
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -2318,7 +2318,7 @@ paths:
           items:
             type: string
             format: uuid
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -2427,7 +2427,7 @@ paths:
           in: body
           schema:
             $ref: '#/definitions/NaturalPersonAllergyLite'
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -2447,7 +2447,7 @@ paths:
           items:
             type: string
             format: uuid
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -2476,7 +2476,7 @@ paths:
           items:
             type: string
             format: uuid
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -2515,7 +2515,7 @@ paths:
             type: array
             items:
               $ref: '#/definitions/NaturalPersonDisabilityLite'
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -2579,7 +2579,7 @@ paths:
           items:
             type: string
             format: uuid
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -2608,7 +2608,7 @@ paths:
           items:
             type: string
             format: uuid
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -2647,7 +2647,7 @@ paths:
             type: array
             items:
               $ref: '#/definitions/NaturalPersonDiseaseLite'
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -2711,7 +2711,7 @@ paths:
           items:
             type: string
             format: uuid
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -2740,7 +2740,7 @@ paths:
           items:
             type: string
             format: uuid
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -2777,7 +2777,7 @@ paths:
           in: body
           schema:
             $ref: '#/definitions/NaturalPersonHealthPlanLite'
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -2837,7 +2837,7 @@ paths:
           items:
             type: string
             format: uuid
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -2866,7 +2866,7 @@ paths:
           items:
             type: string
             format: uuid
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -2903,7 +2903,7 @@ paths:
           in: body
           schema:
             $ref: '#/definitions/NaturalPersonMedicineLite'
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -2963,7 +2963,7 @@ paths:
           items:
             type: string
             format: uuid
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -3002,7 +3002,7 @@ paths:
             type: array
             items:
               $ref: '#/definitions/NaturalPersonNationalityLite'
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -3048,7 +3048,7 @@ paths:
           items:
             type: string
             format: uuid
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -3103,7 +3103,7 @@ paths:
           in: body
           schema:
             $ref: '#/definitions/NaturalPersonRelationshipLite'
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -3207,7 +3207,7 @@ paths:
           items:
             type: string
             format: uuid
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -3236,7 +3236,7 @@ paths:
           items:
             type: string
             format: uuid
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -3260,7 +3260,7 @@ paths:
           items:
             type: string
             format: uuid
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -3284,7 +3284,7 @@ paths:
           items:
             type: string
             format: uuid
-          required: true
+          required: false
       responses:
         204:
           description: 'Done'
@@ -3302,7 +3302,7 @@ paths:
             type: array
             items:
               $ref: '#/definitions/NPBasicProperty'
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -3348,7 +3348,7 @@ paths:
           items:
             type: string
             format: uuid
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -3392,7 +3392,7 @@ paths:
         - name: docNumber
           in: query
           type: string
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -3411,14 +3411,14 @@ paths:
           type: array
           items:
             type: string
-          required: true
+          required: false
         - name: documentTypeIdList
           in: query
           type: array
           items:
             type: string
             format: uuid
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -3439,7 +3439,7 @@ paths:
         - name: userName
           in: query
           type: string
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -3461,7 +3461,7 @@ paths:
         - name: docNumber
           in: query
           type: string
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -3482,30 +3482,30 @@ paths:
         - name: name
           in: query
           type: string
-          required: true
+          required: false
         - name: birthDate
           in: query
           type: string
           format: datetime
-          required: true
+          required: false
         - name: gender
           in: body
           schema:
             $ref: '#/definitions/Gender'
-          required: true
+          required: false
         - name: documentTypeId
           in: query
           type: string
           format: uuid
-          required: true
+          required: false
         - name: documentNumber
           in: query
           type: string
-          required: true
+          required: false
         - name: parentName
           in: query
           type: string
-          required: true
+          required: false
         - name: numRows
           in: query
           type: integer
@@ -3532,15 +3532,15 @@ paths:
         - name: firstName
           in: query
           type: string
-          required: true
+          required: false
         - name: middleName
           in: query
           type: string
-          required: true
+          required: false
         - name: lastName
           in: query
           type: string
-          required: true
+          required: false
         - name: birthDate
           in: query
           type: string
@@ -3554,11 +3554,11 @@ paths:
         - name: motherName
           in: query
           type: string
-          required: true
+          required: false
         - name: identifierDocumentNumber
           in: query
           type: string
-          required: true
+          required: false
         - name: numRows
           in: query
           type: integer
@@ -3585,15 +3585,15 @@ paths:
         - name: firstName
           in: query
           type: string
-          required: true
+          required: false
         - name: middleName
           in: query
           type: string
-          required: true
+          required: false
         - name: lastName
           in: query
           type: string
-          required: true
+          required: false
         - name: birthDate
           in: query
           type: string
@@ -3607,11 +3607,11 @@ paths:
         - name: motherName
           in: query
           type: string
-          required: true
+          required: false
         - name: identifierDocumentNumber
           in: query
           type: string
-          required: true
+          required: false
         - name: numRows
           in: query
           type: integer
@@ -3667,7 +3667,7 @@ paths:
           in: body
           schema:
             $ref: '#/definitions/NaturalPersonLiteExternal'
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -3687,7 +3687,7 @@ paths:
           items:
             type: string
             format: uuid
-          required: true
+          required: false
       responses:
         204:
           description: 'Done'
@@ -3705,7 +3705,7 @@ paths:
           items:
             type: string
             format: uuid
-          required: true
+          required: false
       responses:
         204:
           description: 'Done'
@@ -3736,7 +3736,7 @@ paths:
         - name: fullName
           in: query
           type: string
-          required: true
+          required: false
         - name: birthDate
           in: query
           type: string
@@ -3745,7 +3745,7 @@ paths:
         - name: motherName
           in: query
           type: string
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -3762,7 +3762,7 @@ paths:
         - name: identifierDocumentNumber
           in: query
           type: string
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -3779,7 +3779,7 @@ paths:
         - name: filter
           in: query
           type: string
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -3803,7 +3803,7 @@ paths:
           items:
             type: string
             format: uuid
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -3901,7 +3901,7 @@ paths:
           in: body
           schema:
             $ref: '#/definitions/PersonAddressLite'
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -3943,7 +3943,7 @@ paths:
           items:
             type: string
             format: uuid
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -4003,7 +4003,7 @@ paths:
           items:
             type: string
             format: uuid
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -4032,7 +4032,7 @@ paths:
           items:
             type: string
             format: uuid
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -4069,7 +4069,7 @@ paths:
           in: body
           schema:
             $ref: '#/definitions/PersonDocumentLite'
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -4111,7 +4111,7 @@ paths:
           items:
             type: string
             format: uuid
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -4150,7 +4150,7 @@ paths:
         - name: docNumber
           in: query
           type: string
-          required: true
+          required: false
         - name: typeId
           in: query
           type: string
@@ -4176,7 +4176,7 @@ paths:
             type: array
             items:
               $ref: '#/definitions/PersonDocumentLite'
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -4205,7 +4205,7 @@ paths:
           items:
             type: string
             format: uuid
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -4242,7 +4242,7 @@ paths:
           in: body
           schema:
             $ref: '#/definitions/PersonEContactLite'
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -4284,7 +4284,7 @@ paths:
           items:
             type: string
             format: uuid
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -4331,7 +4331,7 @@ paths:
           items:
             type: string
             format: uuid
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -4357,7 +4357,7 @@ paths:
         - name: contact
           in: query
           type: string
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -4394,7 +4394,7 @@ paths:
           in: body
           schema:
             $ref: '#/definitions/PersonPhoneLite'
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -4436,7 +4436,7 @@ paths:
           items:
             type: string
             format: uuid
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -4501,7 +4501,7 @@ paths:
           items:
             type: string
             format: uuid
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -4525,7 +4525,7 @@ paths:
           items:
             type: string
             format: uuid
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -4546,7 +4546,7 @@ paths:
         - name: filter
           in: query
           type: string
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -4588,7 +4588,7 @@ paths:
           items:
             type: string
             format: uuid
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -4640,7 +4640,7 @@ paths:
         - name: filter
           in: query
           type: string
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -4682,7 +4682,7 @@ paths:
           items:
             type: string
             format: uuid
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -4765,7 +4765,7 @@ paths:
         - name: filter
           in: query
           type: string
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -4789,7 +4789,7 @@ paths:
           items:
             type: string
             format: uuid
-          required: true
+          required: false
       responses:
         200:
           description: 'Success'
@@ -5880,11 +5880,13 @@ definitions:
         items:
           $ref: '#/definitions/NaturalPersonLiteExternal'
 
-securityDefinitions:
-  client_credentials:
-    type: "oauth2"
-    description: "Generates a token via the Client Credentials flow."
-    tokenUrl: "https://login.sdasystems.org/connect/token"
-    flow: "application"
-    scopes: 
-      peoplemgmt.bra: "People Management API"
+securityDefinitions:                                                     
+  client_credentials:                                                    
+    type: 'oauth2'                                                       
+    description: 'Generates a token via the Client Credentials flow.'    
+    tokenUrl: 'https://login.sdasystems.org/connect/token'               
+    flow: 'application'                                                  
+    scopes:                                                              
+      peoplemgmt.bra: 'People Management API'                            
+                                                                         
+
