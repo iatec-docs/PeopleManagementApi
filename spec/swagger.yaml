@@ -1024,9 +1024,12 @@ paths:
         - 'applications/xml'
       parameters:
         - name: classification
-          in: body
-          schema:
-            $ref: '#/definitions/DocumentTypeClassification'
+          in: query
+          type: string
+          enum:
+           - 'LegalEntity'
+           - 'NaturalPerson'
+           - 'Both'
           required: true
       responses:
         200:
@@ -1908,9 +1911,17 @@ paths:
           type: string
           required: false
         - name: divisionType
-          in: body
-          schema:
-            $ref: '#/definitions/PoliticalDivisionType'
+          in: query
+          type: string
+          enum:
+           - 'Region'
+           - 'State'
+           - 'Province'
+           - 'District'
+           - 'Community'
+           - 'Department'
+           - 'Canton'
+           - 'City'
           required: true
         - name: countryId
           in: query
@@ -2233,9 +2244,17 @@ paths:
         - 'applications/xml'
       parameters:
         - name: divisionType
-          in: body
-          schema:
-            $ref: '#/definitions/PoliticalDivisionType'
+          in: query
+          type: string
+          enum:
+           - 'Region'
+           - 'State'
+           - 'Province'
+           - 'District'
+           - 'Community'
+           - 'Department'
+           - 'Canton'
+           - 'City'
           required: true
         - name: countryId
           in: query
@@ -3226,9 +3245,20 @@ paths:
         - 'applications/xml'
       parameters:
         - name: relationship
-          in: body
-          schema:
-            $ref: '#/definitions/Relationship'
+          in: query
+          type: string
+          enum:
+           - 'Mother'
+           - 'Father'
+           - 'Spouse'
+           - 'Sibling'
+           - 'Uncle'
+           - 'Aunt'
+           - 'Grandmother'
+           - 'Grandfather'
+           - 'Stepfather'
+           - 'Stepmother'
+           - 'Parent'
           required: true
         - name: naturalPersonIdList
           in: query
@@ -3489,9 +3519,8 @@ paths:
           format: datetime
           required: false
         - name: gender
-          in: body
-          schema:
-            $ref: '#/definitions/Gender'
+          in: query
+          type: string
           required: false
         - name: documentTypeId
           in: query
@@ -3547,9 +3576,11 @@ paths:
           format: datetime
           required: true
         - name: gender
-          in: body
-          schema:
-            $ref: '#/definitions/Gender'
+          in: query
+          type: string
+          enum:
+           - 'Male'
+           - 'Female'
           required: true
         - name: motherName
           in: query
@@ -3600,9 +3631,11 @@ paths:
           format: datetime
           required: true
         - name: gender
-          in: body
-          schema:
-            $ref: '#/definitions/Gender'
+          in: query
+          type: string
+          enum:
+           - 'Male'
+           - 'Female'
           required: true
         - name: motherName
           in: query
@@ -4321,9 +4354,13 @@ paths:
         - 'applications/xml'
       parameters:
         - name: type
-          in: body
-          schema:
-            $ref: '#/definitions/ContactType'
+          in: query
+          type: string
+          enum:
+           - 'Other'
+           - 'WebPage'
+           - 'InstantMessenger'
+           - 'Email'
           required: true
         - name: personIdList
           in: query
@@ -4350,9 +4387,13 @@ paths:
         - 'applications/xml'
       parameters:
         - name: type
-          in: body
-          schema:
-            $ref: '#/definitions/ContactType'
+          in: query
+          type: string
+          enum:
+           - 'Other'
+           - 'WebPage'
+           - 'InstantMessenger'
+           - 'Email'
           required: true
         - name: contact
           in: query
