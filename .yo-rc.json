@@ -3,7 +3,7 @@
     "importExistingSpec": true,
     "importedSpec": "swagger.yaml",
     "name": "ADEMS People Management",
-    "repo": "iatecbr/PeopleMgmtApi.Doc",
+    "repo": "iatecbr/PeopleMgmtApi.Swagger",
     "splitSpec": false,
     "samples": true,
     "installSwaggerUI": true
