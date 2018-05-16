@@ -90,6 +90,7 @@ paths:
         - 'applications/xml'
       parameters:
         - name: idList
+          collectionFormat: multi
           in: query
           type: array
           items:
@@ -184,6 +185,7 @@ paths:
         - 'applications/xml'
       parameters:
         - name: idList
+          collectionFormat: multi
           in: query
           type: array
           items:
@@ -302,6 +304,7 @@ paths:
         - 'applications/xml'
       parameters:
         - name: idList
+          collectionFormat: multi
           in: query
           type: array
           items:
@@ -569,6 +572,7 @@ paths:
         - 'applications/xml'
       parameters:
         - name: idList
+          collectionFormat: multi
           in: query
           type: array
           items:
@@ -698,6 +702,7 @@ paths:
         - 'applications/xml'
       parameters:
         - name: idList
+          collectionFormat: multi
           in: query
           type: array
           items:
@@ -814,6 +819,7 @@ paths:
         - 'applications/xml'
       parameters:
         - name: idList
+          collectionFormat: multi
           in: query
           type: array
           items:
@@ -877,6 +883,7 @@ paths:
         - 'applications/xml'
       parameters:
         - name: idList
+          collectionFormat: multi
           in: query
           type: array
           items:
@@ -901,6 +908,7 @@ paths:
         - 'applications/xml'
       parameters:
         - name: idList
+          collectionFormat: multi
           in: query
           type: array
           items:
@@ -1024,12 +1032,9 @@ paths:
         - 'applications/xml'
       parameters:
         - name: classification
-          in: query
-          type: string
-          enum:
-           - 'LegalEntity'
-           - 'NaturalPerson'
-           - 'Both'
+          in: body
+          schema:
+            $ref: '#/definitions/DocumentTypeClassification'
           required: true
       responses:
         200:
@@ -1118,6 +1123,7 @@ paths:
         - 'applications/xml'
       parameters:
         - name: naturalPersonIdList
+          collectionFormat: multi
           in: query
           type: array
           items:
@@ -1181,6 +1187,7 @@ paths:
         - 'applications/xml'
       parameters:
         - name: idList
+          collectionFormat: multi
           in: query
           type: array
           items:
@@ -1433,6 +1440,7 @@ paths:
         - 'applications/xml'
       parameters:
         - name: idList
+          collectionFormat: multi
           in: query
           type: array
           items:
@@ -1532,6 +1540,7 @@ paths:
         - 'applications/xml'
       parameters:
         - name: legalEntityIdList
+          collectionFormat: multi
           in: query
           type: array
           items:
@@ -1625,6 +1634,7 @@ paths:
             type: string
           required: false
         - name: documentTypeIdList
+          collectionFormat: multi
           in: query
           type: array
           items:
@@ -1649,6 +1659,7 @@ paths:
         - 'applications/xml'
       parameters:
         - name: idList
+          collectionFormat: multi
           in: query
           type: array
           items:
@@ -1778,6 +1789,7 @@ paths:
         - 'applications/xml'
       parameters:
         - name: legalEntityIdList
+          collectionFormat: multi
           in: query
           type: array
           items:
@@ -1812,6 +1824,7 @@ paths:
         - 'applications/xml'
       parameters:
         - name: legalEntityIdList
+          collectionFormat: multi
           in: query
           type: array
           items:
@@ -1883,6 +1896,7 @@ paths:
         - 'applications/xml'
       parameters:
         - name: idList
+          collectionFormat: multi
           in: query
           type: array
           items:
@@ -1911,17 +1925,9 @@ paths:
           type: string
           required: false
         - name: divisionType
-          in: query
-          type: string
-          enum:
-           - 'Region'
-           - 'State'
-           - 'Province'
-           - 'District'
-           - 'Community'
-           - 'Department'
-           - 'Canton'
-           - 'City'
+          in: body
+          schema:
+            $ref: '#/definitions/PoliticalDivisionType'
           required: true
         - name: countryId
           in: query
@@ -2220,6 +2226,7 @@ paths:
         - 'applications/xml'
       parameters:
         - name: idList
+          collectionFormat: multi
           in: query
           type: array
           items:
@@ -2244,17 +2251,9 @@ paths:
         - 'applications/xml'
       parameters:
         - name: divisionType
-          in: query
-          type: string
-          enum:
-           - 'Region'
-           - 'State'
-           - 'Province'
-           - 'District'
-           - 'Community'
-           - 'Department'
-           - 'Canton'
-           - 'City'
+          in: body
+          schema:
+            $ref: '#/definitions/PoliticalDivisionType'
           required: true
         - name: countryId
           in: query
@@ -2332,6 +2331,7 @@ paths:
         - 'applications/xml'
       parameters:
         - name: idList
+          collectionFormat: multi
           in: query
           type: array
           items:
@@ -2461,6 +2461,7 @@ paths:
         - 'applications/xml'
       parameters:
         - name: naturalPersonIdList
+          collectionFormat: multi
           in: query
           type: array
           items:
@@ -2490,6 +2491,7 @@ paths:
           format: uuid
           required: true
         - name: naturalPersonIdList
+          collectionFormat: multi
           in: query
           type: array
           items:
@@ -2593,6 +2595,7 @@ paths:
         - 'applications/xml'
       parameters:
         - name: naturalPersonIdList
+          collectionFormat: multi
           in: query
           type: array
           items:
@@ -2622,6 +2625,7 @@ paths:
           format: uuid
           required: true
         - name: naturalPersonIdList
+          collectionFormat: multi
           in: query
           type: array
           items:
@@ -2725,6 +2729,7 @@ paths:
         - 'applications/xml'
       parameters:
         - name: naturalPersonIdList
+          collectionFormat: multi
           in: query
           type: array
           items:
@@ -2754,6 +2759,7 @@ paths:
           format: uuid
           required: true
         - name: naturalPersonIdList
+          collectionFormat: multi
           in: query
           type: array
           items:
@@ -2851,6 +2857,7 @@ paths:
         - 'applications/xml'
       parameters:
         - name: naturalPersonIdList
+          collectionFormat: multi
           in: query
           type: array
           items:
@@ -2880,6 +2887,7 @@ paths:
           format: uuid
           required: true
         - name: naturalPersonIdList
+          collectionFormat: multi
           in: query
           type: array
           items:
@@ -2977,6 +2985,7 @@ paths:
         - 'applications/xml'
       parameters:
         - name: naturalPersonIdList
+          collectionFormat: multi
           in: query
           type: array
           items:
@@ -3062,6 +3071,7 @@ paths:
         - 'applications/xml'
       parameters:
         - name: naturalPersonIdList
+          collectionFormat: multi
           in: query
           type: array
           items:
@@ -3221,6 +3231,7 @@ paths:
         - 'applications/xml'
       parameters:
         - name: naturalPersonIdList
+          collectionFormat: multi
           in: query
           type: array
           items:
@@ -3245,22 +3256,12 @@ paths:
         - 'applications/xml'
       parameters:
         - name: relationship
-          in: query
-          type: string
-          enum:
-           - 'Mother'
-           - 'Father'
-           - 'Spouse'
-           - 'Sibling'
-           - 'Uncle'
-           - 'Aunt'
-           - 'Grandmother'
-           - 'Grandfather'
-           - 'Stepfather'
-           - 'Stepmother'
-           - 'Parent'
+          in: body
+          schema:
+            $ref: '#/definitions/Relationship'
           required: true
         - name: naturalPersonIdList
+          collectionFormat: multi
           in: query
           type: array
           items:
@@ -3285,6 +3286,7 @@ paths:
         - 'applications/xml'
       parameters:
         - name: naturalPersonIdList
+          collectionFormat: multi
           in: query
           type: array
           items:
@@ -3309,6 +3311,7 @@ paths:
         - 'applications/xml'
       parameters:
         - name: naturalPersonIdList
+          collectionFormat: multi
           in: query
           type: array
           items:
@@ -3373,6 +3376,7 @@ paths:
         - 'applications/xml'
       parameters:
         - name: idList
+          collectionFormat: multi
           in: query
           type: array
           items:
@@ -3443,6 +3447,7 @@ paths:
             type: string
           required: false
         - name: documentTypeIdList
+          collectionFormat: multi
           in: query
           type: array
           items:
@@ -3519,8 +3524,9 @@ paths:
           format: datetime
           required: false
         - name: gender
-          in: query
-          type: string
+          in: body
+          schema:
+            $ref: '#/definitions/Gender'
           required: false
         - name: documentTypeId
           in: query
@@ -3576,11 +3582,9 @@ paths:
           format: datetime
           required: true
         - name: gender
-          in: query
-          type: string
-          enum:
-           - 'Male'
-           - 'Female'
+          in: body
+          schema:
+            $ref: '#/definitions/Gender'
           required: true
         - name: motherName
           in: query
@@ -3631,11 +3635,9 @@ paths:
           format: datetime
           required: true
         - name: gender
-          in: query
-          type: string
-          enum:
-           - 'Male'
-           - 'Female'
+          in: body
+          schema:
+            $ref: '#/definitions/Gender'
           required: true
         - name: motherName
           in: query
@@ -3715,6 +3717,7 @@ paths:
         - 'applications/xml'
       parameters:
         - name: naturalPersonIdList
+          collectionFormat: multi
           in: query
           type: array
           items:
@@ -3733,6 +3736,7 @@ paths:
         - 'applications/xml'
       parameters:
         - name: naturalPersonIdList
+          collectionFormat: multi
           in: query
           type: array
           items:
@@ -3831,6 +3835,7 @@ paths:
         - 'applications/xml'
       parameters:
         - name: idList
+          collectionFormat: multi
           in: query
           type: array
           items:
@@ -3971,6 +3976,7 @@ paths:
         - 'applications/xml'
       parameters:
         - name: personIdList
+          collectionFormat: multi
           in: query
           type: array
           items:
@@ -4031,6 +4037,7 @@ paths:
         - 'applications/xml'
       parameters:
         - name: personIdList
+          collectionFormat: multi
           in: query
           type: array
           items:
@@ -4060,6 +4067,7 @@ paths:
           format: uuid
           required: true
         - name: personIdList
+          collectionFormat: multi
           in: query
           type: array
           items:
@@ -4139,6 +4147,7 @@ paths:
         - 'applications/xml'
       parameters:
         - name: personIdList
+          collectionFormat: multi
           in: query
           type: array
           items:
@@ -4233,6 +4242,7 @@ paths:
           format: uuid
           required: true
         - name: personIdList
+          collectionFormat: multi
           in: query
           type: array
           items:
@@ -4312,6 +4322,7 @@ paths:
         - 'applications/xml'
       parameters:
         - name: personIdList
+          collectionFormat: multi
           in: query
           type: array
           items:
@@ -4354,15 +4365,12 @@ paths:
         - 'applications/xml'
       parameters:
         - name: type
-          in: query
-          type: string
-          enum:
-           - 'Other'
-           - 'WebPage'
-           - 'InstantMessenger'
-           - 'Email'
+          in: body
+          schema:
+            $ref: '#/definitions/ContactType'
           required: true
         - name: personIdList
+          collectionFormat: multi
           in: query
           type: array
           items:
@@ -4387,13 +4395,9 @@ paths:
         - 'applications/xml'
       parameters:
         - name: type
-          in: query
-          type: string
-          enum:
-           - 'Other'
-           - 'WebPage'
-           - 'InstantMessenger'
-           - 'Email'
+          in: body
+          schema:
+            $ref: '#/definitions/ContactType'
           required: true
         - name: contact
           in: query
@@ -4472,6 +4476,7 @@ paths:
         - 'applications/xml'
       parameters:
         - name: personIdList
+          collectionFormat: multi
           in: query
           type: array
           items:
@@ -4537,6 +4542,7 @@ paths:
           format: uuid
           required: true
         - name: personIdList
+          collectionFormat: multi
           in: query
           type: array
           items:
@@ -4561,6 +4567,7 @@ paths:
         - 'applications/xml'
       parameters:
         - name: personIdList
+          collectionFormat: multi
           in: query
           type: array
           items:
@@ -4624,6 +4631,7 @@ paths:
         - 'applications/xml'
       parameters:
         - name: idList
+          collectionFormat: multi
           in: query
           type: array
           items:
@@ -4718,6 +4726,7 @@ paths:
         - 'applications/xml'
       parameters:
         - name: idList
+          collectionFormat: multi
           in: query
           type: array
           items:
@@ -4825,6 +4834,7 @@ paths:
         - 'applications/xml'
       parameters:
         - name: idList
+          collectionFormat: multi
           in: query
           type: array
           items:
