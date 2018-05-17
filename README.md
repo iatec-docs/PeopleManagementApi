@@ -1,4 +1,4 @@
-# ADEMS People Management OpenAPI Specification
+# People Management OpenAPI Specification
 [![Build Status](https://travis-ci.org/iatecbr/PeopleMgmtApi.Swagger.svg?branch=master)](https://travis-ci.org/iatecbr/PeopleMgmtApi.Swagger)
 
 ## Steps to finish
